@@ -348,5 +348,20 @@ module.exports = {
   generateToken: generateToken,
   getToken: getToken,
   removeToken: removeToken,
-  getOS: getOS
+  getOS: getOS,
+  isFFmpegInstalled: isFFmpegInstalled
 };
+
+/**
+ * Check if ffmpeg is installed on the system.
+ *
+ * @return {boolean}
+ */
+function isFFmpegInstalled() {
+  try {
+    di.childProcess.execSync('ffmpeg -version', { stdio: 'ignore' });
+    return true;
+  } catch (e) {
+    return false;
+  }
+}

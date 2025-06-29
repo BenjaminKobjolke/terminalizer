@@ -12,7 +12,7 @@
 [![Unicorn](https://img.shields.io/badge/nyancat-approved-ff69b4.svg)](https://www.youtube.com/watch?v=QH2-TGUlwu4)
 [![Tweet](https://img.shields.io/badge/twitter-share-76abec.svg)](https://goo.gl/QJzJu1)
 
-> Record your terminal and generate animated gif images or share a web player link [www.terminalizer.com](https://www.terminalizer.com)
+> Record your terminal and generate animated gif images or MP4 videos, or share a web player link [www.terminalizer.com](https://www.terminalizer.com)
 
 <p align="center"><img src="/img/demo.gif?raw=true"/></p>
 
@@ -195,7 +195,10 @@ Options
 
 ## Render
 
-> Render a recording file as an animated gif image
+> Render a recording file as an animated gif image or MP4 video
+>
+> **Note for MP4 export:** You need to have `ffmpeg` installed on your system and accessible in your PATH.
+> You can download it from [ffmpeg.org](https://ffmpeg.org/download.html).
 
 ```bash
 terminalizer render <recordingFile>
@@ -204,9 +207,10 @@ terminalizer render <recordingFile>
 Options
 
 ```
--o, --output   A name for the output file                                      [string]
--q, --quality  The quality of the rendered image (1 - 100)                     [number]
+-o, --output   A name for the output file (e.g., myrender.gif or myrender.mp4) [string]
+-q, --quality  The quality of the rendered image (1 - 100, applies to GIF only) [number]
 -s, --step     To reduce the number of rendered frames (step > 1) [number] [default: 1]
+-f, --format   The output format ('gif' or 'mp4')          [string] [default: "gif"]
 ```
 
 ## Share
