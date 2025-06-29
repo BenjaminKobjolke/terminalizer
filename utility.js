@@ -359,9 +359,13 @@ module.exports = {
  */
 function isFFmpegInstalled() {
   try {
-    di.childProcess.execSync('ffmpeg -version', { stdio: 'ignore' });
+    di.childProcess.execSync('ffmpeg -version', { stdio: 'pipe' }); // Changed to pipe to capture output if needed, though we mainly care about the error here.
     return true;
   } catch (e) {
+    console.error(di.chalk.yellow('[ffmpeg check] Error when trying to run "ffmpeg -version":'));
+    console.error(di.chalk.yellow('Stderr:'), e.stderr ? e.stderr.toString() : 'N/A');
+    console.error(di.chalk.yellow('Stdout:'), e.stdout ? e.stdout.toString() : 'N/A');
+    console.error(di.chalk.yellow('Error object:'), e);
     return false;
   }
 }
