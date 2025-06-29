@@ -43,7 +43,7 @@ di.require('inquirer');
 
 di.set('pty', require('@homebridge/node-pty-prebuilt-multiarch'));
 di.set('PNG', require('pngjs').PNG);
-di.set('spawn', require('child_process').spawn);
+di.require('child_process'); // Make the entire module available as di.childProcess
 di.set('utility', require('./utility.js'));
 di.set('commands', commands);
 di.set('errorHandler', errorHandler);
