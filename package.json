@@ -18,6 +18,9 @@
     "build": "NODE_ENV=production webpack --progress",
     "prepublish": "npm run build"
   },
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "keywords": [
     "terminal",
     "record",
@@ -41,6 +44,7 @@
     "pty"
   ],
   "dependencies": {
+    "@ffmpeg/ffmpeg": "^0.12.15",
     "@homebridge/node-pty-prebuilt-multiarch": "^0.11.14",
     "async": "^2.6.3",
     "async-promises": "^0.2.2",
@@ -49,7 +53,7 @@
     "death": "^1.1.0",
     "deepmerge": "^2.2.1",
     "electron": "^25.2.0",
-    "fluent-ffmpeg": "^2.1.3",
+    "ffmpeg": "^0.0.4",
     "fs-extra": "^5.0.0",
     "gif-encoder": "^0.6.1",
     "inquirer": "^6.5.2",

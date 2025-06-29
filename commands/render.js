@@ -6,7 +6,8 @@
  */
 
 const tmp = require('tmp');
-const ffmpeg = require('fluent-ffmpeg');
+// Import the ffmpeg-direct module for direct FFmpeg command execution
+const { convertFramesToMp4 } = require('../render/src/js/ffmpeg-direct');
 
 tmp.setGracefulCleanup();
 
@@ -291,7 +292,24 @@ function done(outputFile, format) {
   const fileType = format === 'mp4' ? 'MP4 video' : 'animated GIF image';
   console.log(`The ${fileType} is saved into the file:`);
   console.log(di.chalk.magenta(outputFile));
-  process.exit();
+  
+  // Check if the file exists and log its size
+  try {
+    const fs = require('fs');
+    const stats = fs.statSync(outputFile);
+    console.log(di.chalk.green(`File size: ${stats.size} bytes`));
+    
+    if (stats.size === 0) {
+      console.error(di.chalk.red('Warning: Output file exists but is empty (0 bytes)'));
+    }
+  } catch (error) {
+    console.error(di.chalk.red(`Error checking output file: ${error.message}`));
+  }
+  
+  // Don't exit immediately for MP4 format to allow async operations to complete
+  if (format !== 'mp4') {
+    process.exit();
+  }
 }
 
 /**
@@ -375,17 +393,34 @@ function command(argv) {
       // Merge the rendered frames
       function (frameDimensions, callback) {
         if (argv.format === 'mp4') {
-          if (!di.utility.isFFmpegInstalled()) {
-            console.error(di.chalk.red('Error: ffmpeg is not installed. Please install ffmpeg to export MP4 files.'));
-            process.exit(1);
-          }
+          // We're using Node.js FFmpeg, so no need to check for system FFmpeg
           mergeFramesToMp4(records, mergingOptions, frameDimensions)
-            .then(() => callback(null))
-            .catch(callback);
+            .then(() => {
+              if (typeof callback === 'function') {
+                callback(null);
+              }
+            })
+            .catch((error) => {
+              if (typeof callback === 'function') {
+                callback(error);
+              } else {
+                console.error(di.chalk.red('[merge-mp4] Error in waterfall: ' + error.message));
+              }
+            });
         } else {
           mergeFramesToGif(records, mergingOptions, frameDimensions)
-            .then(() => callback(null))
-            .catch(callback);
+            .then(() => {
+              if (typeof callback === 'function') {
+                callback(null);
+              }
+            })
+            .catch((error) => {
+              if (typeof callback === 'function') {
+                callback(error);
+              } else {
+                console.error(di.chalk.red('[merge-gif] Error in waterfall: ' + error.message));
+              }
+            });
         }
       },
 
@@ -407,6 +442,15 @@ function command(argv) {
  * @return {Promise}
  */
 function mergeFramesToMp4(records, options, frameDimensions) {
+  // Create an empty file at the output path to ensure it exists
+  try {
+    const fs = require('fs');
+    fs.writeFileSync(options.outputFile, '');
+    console.log(di.chalk.green(`[merge-mp4] Created empty file at ${options.outputFile}`));
+  } catch (error) {
+    console.error(di.chalk.red(`[merge-mp4] Error creating empty file: ${error.message}`));
+  }
+  
   return new Promise(function (resolve, reject) {
     const framesCount = records.length;
     const start = Date.now();
@@ -417,64 +461,56 @@ function mergeFramesToMp4(records, options, frameDimensions) {
       Math.ceil(framesCount / options.step)
     );
 
-    const command = ffmpeg();
+    console.log(di.chalk.green('[merge-mp4] Starting MP4 conversion with Node.js FFmpeg'));
+    console.log("renderDir: ", renderDir);
+    console.log("Frames count: ", framesCount);
 
-    // Input images
+    // Collect frame paths
+    const framePaths = [];
     for (let i = 0; i < framesCount; i++) {
       if (stepsCounter !== 0) {
         stepsCounter = (stepsCounter + 1) % options.step;
         continue;
       }
       stepsCounter = (stepsCounter + 1) % options.step;
-
       const framePath = di.path.join(renderDir, i + ".png");
-      const duration = records[(i + 1) % framesCount].delay / 1000; // Convert ms to seconds
-      command.input(framePath).inputOptions([`-framerate ${1 / duration}`]); // This might not be the best way to set individual frame duration
-                                                                           // fluent-ffmpeg is a bit tricky with per-frame duration.
-                                                                           // A more robust way might involve creating a concat demuxer file.
-                                                                           // For now, this is a simpler approach.
+      framePaths.push(framePath);
     }
 
-    command
-      .outputOptions([
-        '-c:v libx264',
-        '-pix_fmt yuv420p', // for compatibility
-        `-s ${frameDimensions.width}x${frameDimensions.height}`,
-        // TODO: Explore options for variable frame rate if the above inputOption doesn't work as expected
-        // or if a more precise timing control is needed.
-        // FFmpeg might average out the framerates or pick the first one.
-        // Using a concat file list (`-f concat -safe 0 -i list.txt`) is often more reliable for varied durations.
-      ])
-      .on('progress', function(progress) {
-        // fluent-ffmpeg's progress reporting might not directly map to frames processed in this setup.
-        // We'll rely on the existing progressBar logic for now, though it might not be perfectly accurate for mp4.
-        // For a more accurate progress, one might need to parse ffmpeg's stderr directly.
-      })
-      .on('end', function () {
-        progressBar.update(progressBar.total); // Mark as complete
-        console.log(di.chalk.green('[merge-mp4] Process successfully completed in ' + (Date.now() - start) + 'ms.'));
-        resolve();
-      })
-      .on('error', function (err, stdout, stderr) {
-        console.error('ffmpeg stderr:', stderr);
-        reject(new Error('Error merging frames to MP4: ' + err.message));
-      })
-      .save(options.outputFile);
+    // Calculate average frame rate based on frame delays
+    let totalDelay = 0;
+    for (let i = 0; i < records.length; i++) {
+      totalDelay += records[i].delay;
+    }
+    const avgFrameRate = Math.round(1000 / (totalDelay / records.length));
+    console.log(di.chalk.blue(`[merge-mp4] Average frame rate: ${avgFrameRate} fps`));
 
-      // Manually tick progress as ffmpeg processes (simplistic approach)
-      // This is not ideal as ffmpeg processing time per frame isn't constant
-      // and this doesn't reflect actual ffmpeg progress.
-      let simulatedTicks = 0;
-      const totalTicks = Math.ceil(framesCount / options.step);
-      const interval = setInterval(() => {
-        if (simulatedTicks < totalTicks) {
-            progressBar.tick();
-            simulatedTicks++;
-        } else {
-            clearInterval(interval);
-        }
-      }, (options.step * 50)); // Arbitrary interval, adjust as needed
-
+    // Convert frames to MP4 using Node.js FFmpeg
+    convertFramesToMp4({
+      framePaths: framePaths,
+      outputPath: options.outputFile,
+      dimensions: frameDimensions,
+      frameRate: avgFrameRate,
+      onProgress: (percent) => {
+        progressBar.update(percent / 100 * progressBar.total);
+      }
+    })
+    .then(() => {
+      progressBar.update(progressBar.total); // Mark as complete
+      console.log(di.chalk.green('[merge-mp4] Process successfully completed in ' + (Date.now() - start) + 'ms.'));
+      resolve();
+    })
+    .catch((error) => {
+      // Handle different error formats
+      if (error && error.message) {
+        console.error(di.chalk.red('[merge-mp4] Error: ' + error.message));
+      } else if (error && error.msg) {
+        console.error(di.chalk.red('[merge-mp4] Error: ' + error.msg));
+      } else {
+        console.error(di.chalk.red('[merge-mp4] Error: ' + JSON.stringify(error)));
+      }
+      reject(error);
+    });
   });
 }
 

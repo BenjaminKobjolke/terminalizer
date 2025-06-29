@@ -1,0 +1,653 @@
+# The configurations that used for the recording, feel free to edit them
+config:
+
+  # Specify a command to be executed
+  # like `/bin/bash -l`, `ls`, or any other commands
+  # the default is bash for Linux
+  # or powershell.exe for Windows
+  command: cmd.exe
+  
+  # Specify the current working directory path
+  # the default is the current working directory path
+  cwd: D:\history
+  
+  # Export additional ENV variables
+  env:
+    recording: true
+  
+  # Explicitly set the number of columns
+  # or use `auto` to take the current
+  # number of columns of your shell
+  cols: 120
+  
+  # Explicitly set the number of rows
+  # or use `auto` to take the current
+  # number of rows of your shell
+  rows: 30
+  
+  # Amount of times to repeat GIF
+  # If value is -1, play once
+  # If value is 0, loop indefinitely
+  # If value is a positive number, loop n times
+  repeat: 0
+  
+  # Quality
+  # 1 - 100
+  quality: 100
+  
+  # Delay between frames in ms
+  # If the value is `auto` use the actual recording delays
+  frameDelay: auto
+  
+  # Maximum delay between frames in ms
+  # Ignored if the `frameDelay` isn't set to `auto`
+  # Set to `auto` to prevent limiting the max idle time
+  maxIdleTime: 2000
+  
+  # The surrounding frame box 
+  # The `type` can be null, window, floating, or solid`
+  # To hide the title use the value null
+  # Don't forget to add a backgroundColor style with a null as type
+  frameBox:
+      type: solid
+      title: null
+      style:     
+          boxShadow: none
+          margin: 0px
+  
+  
+  # Add a watermark image to the rendered gif
+  # You need to specify an absolute path for
+  # the image on your machine or a URL, and you can also
+  # add your own CSS styles
+  watermark:
+    imagePath: null
+    style:
+      position: absolute
+      right: 15px
+      bottom: 15px
+      width: 100px
+      opacity: 0.9
+  
+  # Cursor style can be one of
+  # `block`, `underline`, or `bar`
+  cursorStyle: block
+  
+  # Font family
+  # You can use any font that is installed on your machine
+  # in CSS-like syntax
+  fontFamily: "Monaco, Lucida Console, Ubuntu Mono, Monospace"
+  
+  # The size of the font
+  fontSize: 12
+  
+  # The height of lines
+  lineHeight: 1
+  
+  # The spacing between letters
+  letterSpacing: 0
+  
+  # Theme
+  theme:
+    background: "transparent"
+    foreground: "#afafaf"
+    cursor: "#c7c7c7"
+    black: "#232628"
+    red: "#fc4384"
+    green: "#b3e33b"
+    yellow: "#ffa727"
+    blue: "#75dff2"
+    magenta: "#ae89fe"
+    cyan: "#708387"
+    white: "#d5d5d0"
+    brightBlack: "#626566"
+    brightRed: "#ff7fac"
+    brightGreen: "#c8ed71"
+    brightYellow: "#ebdf86"
+    brightBlue: "#75dff2"
+    brightMagenta: "#ae89fe"
+    brightCyan: "#b1c6ca"
+    brightWhite: "#f9f9f4"
+  
+# Records, feel free to edit them
+records:
+  - delay: 342
+    content: "\e[?25l\e[2J\e[m\e[HMicrosoft Windows [Version 10.0.22621.5472]\r\n(c) Microsoft Corporation. All rights reserved.\e[4;1HD:\\history>\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a\e[?25h"
+  - delay: 1169
+    content: a
+  - delay: 109
+    content: i
+  - delay: 110
+    content: ' '
+  - delay: 140
+    content: u
+  - delay: 78
+    content: s
+  - delay: 93
+    content: e
+  - delay: 141
+    content: ' '
+  - delay: 140
+    content: f
+  - delay: 141
+    content: f
+  - delay: 45
+    content: m
+  - delay: 154
+    content: p
+  - delay: 46
+    content: e
+  - delay: 143
+    content: g
+  - delay: 110
+    content: ' '
+  - delay: 78
+    content: t
+  - delay: 78
+    content: o
+  - delay: 94
+    content: ' '
+  - delay: 574
+    content: i
+  - delay: 126
+    content: 'n'
+  - delay: 123
+    content: c
+  - delay: 200
+    content: r
+  - delay: 154
+    content: e
+  - delay: 187
+    content: a
+  - delay: 32
+    content: s
+  - delay: 93
+    content: e
+  - delay: 170
+    content: ' '
+  - delay: 153
+    content: t
+  - delay: 111
+    content: h
+  - delay: 78
+    content: e
+  - delay: 95
+    content: ' '
+  - delay: 109
+    content: s
+  - delay: 281
+    content: a
+  - delay: 233
+    content: t
+  - delay: 156
+    content: u
+  - delay: 79
+    content: r
+  - delay: 156
+    content: a
+  - delay: 77
+    content: t
+  - delay: 64
+    content: i
+  - delay: 31
+    content: o
+  - delay: 110
+    content: 'n'
+  - delay: 77
+    content: ' '
+  - delay: 94
+    content: o
+  - delay: 109
+    content: f
+  - delay: 125
+    content: ' '
+  - delay: 109
+    content: r
+  - delay: 139
+    content: e
+  - delay: 188
+    content: d
+  - delay: 126
+    content: ' '
+  - delay: 1079
+    content: b
+  - delay: 157
+    content: 'y'
+  - delay: 140
+    content: ' '
+  - delay: 187
+    content: '2'
+  - delay: 219
+    content: '0'
+  - delay: 322
+    content: '0' 
+  - delay: 298
+    content: '%'
+  - delay: 534
+    content: ' '
+  - delay: 265
+    content: i
+  - delay: 157
+    content: 'n'
+  - delay: 61
+    content: ' '
+  - delay: 250
+    content: d
+  - delay: 76
+    content: u
+  - delay: 202
+    content: "\e[?25l\e[4;12Hai use ffmpeg to increase the saturation of red by 200% in dummy.mp4\e[?25h"
+  - delay: 579
+    content: "\r\n\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe - ai  use ffmpeg to increase the saturation of red by 200% in dummy.mp4\a"
+  - delay: 627
+    content: '|'
+  - delay: 94
+    content: "\r/"
+  - delay: 109
+    content: "\r-"
+  - delay: 92
+    content: "\r\\"
+  - delay: 110
+    content: "\r|"
+  - delay: 93
+    content: "\r/"
+  - delay: 110
+    content: "\r-"
+  - delay: 95
+    content: "\r\\"
+  - delay: 94
+    content: "\r|"
+  - delay: 108
+    content: "\r/"
+  - delay: 93
+    content: "\r-"
+  - delay: 108
+    content: "\r\\"
+  - delay: 93
+    content: "\r|"
+  - delay: 108
+    content: "\r/"
+  - delay: 94
+    content: "\r-"
+  - delay: 108
+    content: "\r\\"
+  - delay: 93
+    content: "\r|"
+  - delay: 110
+    content: "\r/"
+  - delay: 93
+    content: "\r-"
+  - delay: 94
+    content: "\r\\"
+  - delay: 111
+    content: "\r|"
+  - delay: 93
+    content: "\r/"
+  - delay: 110
+    content: "\r-"
+  - delay: 94
+    content: "\r\\"
+  - delay: 93
+    content: "\r|"
+  - delay: 110
+    content: "\r/"
+  - delay: 94
+    content: "\r-"
+  - delay: 109
+    content: "\r\\"
+  - delay: 95
+    content: "\r|"
+  - delay: 94
+    content: "\r/"
+  - delay: 112
+    content: "\r-"
+  - delay: 93
+    content: "\r\\"
+  - delay: 108
+    content: "\r|"
+  - delay: 93
+    content: "\r/"
+  - delay: 109
+    content: "\r-"
+  - delay: 95
+    content: "\r\\"
+  - delay: 92
+    content: "\r|"
+  - delay: 108
+    content: "\r/"
+  - delay: 78
+    content: "\e[?25l\e[H                                                                                                                        \e[K Result:                                                                                                                \e[K 1. ffmpeg -i dummy.mp4 -vf \"eq=saturation=2\" output.mp4                                                                \e[K                                                                                                                        \e[K Tokens used: 892                                                                                                       \e[K                                                                                                                        \e[K This command uses ffmpeg to increase the saturation of the red channel by 200% in the video file                       \e[K dummy.mp4 and saves the output to output.mp4.                                                                          \e[K                                                                                                                        \e[K What do you want to do?                                                                                                \e[K                                                                                                                        \e[K * Execute                                                                                                              \e[K   Explain                                                                                                              \e[K   Type, but don't execute                                                                                              \e[K   Copy to clipboard                                                                                                    \e[K   Copy to clipboard and execute                                                                                        \e[K   Request a new answer                                                                                                 \e[K   Cancel                                                                                                               \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K\e[30;241H"
+  - delay: 3437
+    content: "\e[HMicrosoft Windows [Version 10.0.22621.5472]\e[K\r\n(c) Microsoft Corporation. All rights reserved.\e[K\r\n\e[K\r\nD:\\history>ai use ffmpeg to increase the saturation of red by 200% in dummy.mp4\e[K\r\n\e[K\r\n> ffmpeg -i dummy.mp4 -vf \"eq=saturation=2\" output.mp4\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\r\n\e[K\e[7;1H\e[?25h"
+  - delay: 32
+    content: "ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers\r\n  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)\r\n  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enable-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --enable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-ffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libplacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsoxr --enable-chromaprint\r\n  libavutil      59. 39.100 / 59. 39.100\r\n  libavcodec     61. 19.100 / 61. 19.100\r\n  libavformat    61.  7.100 / 61.  7.100\r\n  libavdevice    61.  3.100 / 61.  3.100\r\n  libavfilter    10.  4.100 / 10.  4.100\r\n  libswscale      8.  3.100 /  8.  3.100\r\n  libswresample   5.  3.100 /  5.  3.100\r\n  libpostproc    58.  3.100 / 58.  3.100"
+  - delay: 10
+    content: "\r\nInput #0, mov,mp4,m4a,3gp,3g2,mj2, from 'dummy.mp4':\r\n  Metadata:\r\n    major_brand     : isom\r\n    minor_version   : 512\r\n    compatible_brands: isomiso2avc1mp41\r\n    encoder         : Lavf61.7.100\r\n  Duration: 00:00:30.53, start: 0.000000, bitrate: 825 kb/s\r\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR\r\n\e[29;120HR 9:16], 827 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Video Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 libx264\r\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Audio Handler\r\n        vendor_id       : [0][0][0][0]\r\nStream mapping:\r\n  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))\r\n  Stream #0:1 -> #0:1 (aac (native) -> aac (native))\r\nPress [q] to stop, [?] for help"
+  - delay: 12
+    content: "\r\n"
+  - delay: 17
+    content: "\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[musing SAR=1/1\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[musing cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mprofile High, level 4.0, 4:2:0, 8-bit\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[m264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.vid\r\n\e[29;120Hdeolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed\r\n\e[29;120Hd_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=30 looka\r\n\e[29;120Hahead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b\r\n\e[29;120Hb_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookah\r\n\e[29;120Hhead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00\r\nOutput #0, mp4, to 'output.mp4':\r\n  Metadata:\r\n    major_brand     : isom\r\n    minor_version   : 512\r\n    compatible_brands: isomiso2avc1mp41\r\n    encoder         : Lavf61.7.100\r\n  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-\r\n\e[29;120H-31, 30 fps, 15360 tbn (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Video Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 libx264\r\n      Side data:\r\n        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A\r\n  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Audio Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 aac"
+  - delay: 8
+    content: "\r\n"
+  - delay: 487
+    content: "frame=   84 fps=0.0 q=29.0 size=     256KiB time=00:00:02.73 bitrate= 767.4kbits/s speed=5.31x    \r"
+  - delay: 512
+    content: "frame=  234 fps=228 q=29.0 size=     768KiB time=00:00:07.73 bitrate= 813.6kbits/s speed=7.54x    \r"
+  - delay: 519
+    content: "frame=  410 fps=266 q=29.0 size=    1280KiB time=00:00:13.60 bitrate= 771.0kbits/s speed=8.81x    \r"
+  - delay: 512
+    content: "frame=  580 fps=282 q=29.0 size=    2048KiB time=00:00:19.26 bitrate= 870.8kbits/s speed=9.37x    \r"
+  - delay: 518
+    content: "frame=  750 fps=291 q=29.0 size=    2304KiB time=00:00:24.93 bitrate= 757.0kbits/s speed=9.68x    \r"
+  - delay: 309
+    content: "\e[38;5;13m[out#0/mp4 @ 000001f1e53684c0] \e[mvideo:3056KiB audio:8KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing over\r\n\e[29;120Hrhead: 1.103991%\r\nframe=  901 fps=311 q=-1.0 Lsize=    3098KiB time=00:00:29.96 bitrate= 846.9kbits/s speed=10.3x\e[4C\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mframe I:4     Avg QP:12.31  size: 54559\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mframe P:227   Avg QP:18.78  size:  8343\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mframe B:670   Avg QP:21.86  size:  1517\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mconsecutive B-frames:  0.8%  0.2%  0.0% 99.0%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mmb I  I16..4: 38.9% 54.6%  6.5%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mmb P  I16..4:  0.2%  0.6%  0.0%  P16..4: 16.0%  4.8%  2.8%  0.0%  0.0%    skip:75.6%       \e[30;114H\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mmb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 12.7%  0.1%  0.0%  direct: 0.1%  skip:87.0%  L0:38\r\n\e[29;120H8.5% L1:60.4% BI: 1.1%\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[m8x8 transform intra:59.8% inter:87.6%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mcoded y,uvDC,uvAC intra: 25.1% 40.7% 15.3% inter: 1.7% 3.9% 0.2%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mi16 v,h,dc,p: 74%  7%  6% 13%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mi8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 20% 35%  4%  4%  3%  5%  3%  4%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mi4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 17% 16%  6% 10%  7%  8%  6%  5%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mi8c dc,h,v,p: 73% 14% 10%  3%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mWeighted P-Frames: Y:0.0% UV:0.0%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mref P L0: 74.8% 13.1%  9.5%  2.5%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mref B L0: 98.0%  1.7%  0.3%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mref B L1: 99.2%  0.8%\e[K\r\n\e[38;5;14m[libx264 @ 000001f1e5366cc0] \e[mkb/s:833.34\e[K"
+  - delay: 14
+    content: "\r\n"
+  - delay: 26
+    content: "\e[38;5;14m[aac @ 000001f1e593e080] \e[mQavg: 65536.000"
+  - delay: 20
+    content: "\r\n"
+  - delay: 19
+    content: "\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
+  - delay: 12
+    content: |-
+
+      D:\history>
+  - delay: 652
+    content: c
+  - delay: 125
+    content: o
+  - delay: 141
+    content: 'n'
+  - delay: 1061
+    content: "\e[?25l\e[30;12H   \e[30;12H\e[?25h"
+  - delay: 377
+    content: d
+  - delay: 107
+    content: i
+  - delay: 123
+    content: r
+  - delay: 99
+    content: "\r\n Volume in drive D is M2Working\r\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe - dir\a\n Volume Serial Number is 2E94-12B5\r\n\n Directory of D:\\history\r\n\n26.06.2025  14:13    <DIR>          .\r\n26.06.2025  14:09         3.148.783 dummy.mp4\r\n26.06.2025  14:13         3.172.531 output.mp4\r\n               2 File(s)      6.321.314 bytes\r\n               1 Dir(s)  2.233.048.432.640 bytes free\r\n\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
+  - delay: 7
+    content: |-
+
+      D:\history>
+  - delay: 1269
+    content: o
+  - delay: 124
+    content: u
+  - delay: 123
+    content: "\e[?25l\e[30;12Houtput.mp4\e[?25h"
+  - delay: 555
+    content: "\r"
+  - delay: 10
+    content: "\n\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe - output.mp4\a"
+  - delay: 71
+    content: "\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
+  - delay: 22
+    content: |-
+
+      D:\history>
+  - delay: 10637
+    content: a
+  - delay: 170
+    content: i
+  - delay: 112
+    content: ' '
+  - delay: 141
+    content: o
+  - delay: 156
+    content: 'n'
+  - delay: 93
+    content: l
+  - delay: 127
+    content: 'y'
+  - delay: 95
+    content: ' '
+  - delay: 407
+    content: c
+  - delay: 170
+    content: r
+  - delay: 284
+    content: "\e[?25l\e[30;20H  \e[30;20H\e[?25h"
+  - delay: 93
+    content: "\b \b"
+  - delay: 223
+    content: i
+  - delay: 546
+    content: "\e[?25l\e[30;15H     \e[30;15H\e[?25h"
+  - delay: 94
+    content: ' '
+  - delay: 594
+    content: "\e[?25l\e[30;14H  \e[30;14H\e[?25h"
+  - delay: 234
+    content: o
+  - delay: 172
+    content: 'n'
+  - delay: 126
+    content: l
+  - delay: 125
+    content: 'y'
+  - delay: 931
+    content: "\e[?25l\e[30;12H      \e[30;12H\e[?25h"
+  - delay: 515
+    content: a
+  - delay: 94
+    content: i
+  - delay: 125
+    content: ' '
+  - delay: 141
+    content: o
+  - delay: 154
+    content: 'n'
+  - delay: 124
+    content: l
+  - delay: 94
+    content: 'y'
+  - delay: 93
+    content: ' '
+  - delay: 375
+    content: i
+  - delay: 188
+    content: 'n'
+  - delay: 80
+    content: c
+  - delay: 170
+    content: r
+  - delay: 172
+    content: e
+  - delay: 156
+    content: a
+  - delay: 78
+    content: s
+  - delay: 63
+    content: e
+  - delay: 124
+    content: ' '
+  - delay: 125
+    content: t
+  - delay: 93
+    content: h
+  - delay: 93
+    content: e
+  - delay: 140
+    content: ' '
+  - delay: 123
+    content: s
+  - delay: 313
+    content: a
+  - delay: 202
+    content: t
+  - delay: 157
+    content: u
+  - delay: 96
+    content: r
+  - delay: 174
+    content: a
+  - delay: 94
+    content: t
+  - delay: 78
+    content: i
+  - delay: 32
+    content: o
+  - delay: 127
+    content: 'n'
+  - delay: 94
+    content: ' '
+  - delay: 235
+    content: o
+  - delay: 125
+    content: f
+  - delay: 94
+    content: ' '
+  - delay: 110
+    content: r
+  - delay: 158
+    content: e
+  - delay: 184
+    content: d
+  - delay: 133
+    content: "\r"
+  - delay: 21
+    content: "\n\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe - ai  only increase the saturation of red\a"
+  - delay: 607
+    content: '|'
+  - delay: 110
+    content: "\r/"
+  - delay: 93
+    content: "\r-"
+  - delay: 95
+    content: "\r\\"
+  - delay: 111
+    content: "\r|"
+  - delay: 94
+    content: "\r/"
+  - delay: 110
+    content: "\r-"
+  - delay: 92
+    content: "\r\\"
+  - delay: 108
+    content: "\r|"
+  - delay: 93
+    content: "\r/"
+  - delay: 108
+    content: "\r-"
+  - delay: 93
+    content: "\r\\"
+  - delay: 109
+    content: "\r|"
+  - delay: 93
+    content: "\r/"
+  - delay: 95
+    content: "\r-"
+  - delay: 107
+    content: "\r\\"
+  - delay: 91
+    content: "\r|"
+  - delay: 109
+    content: "\r/"
+  - delay: 95
+    content: "\r-"
+  - delay: 109
+    content: "\r\\"
+  - delay: 93
+    content: "\r|"
+  - delay: 107
+    content: "\r/"
+  - delay: 95
+    content: "\r-"
+  - delay: 96
+    content: "\r\\"
+  - delay: 112
+    content: "\r|"
+  - delay: 96
+    content: "\r/"
+  - delay: 92
+    content: "\r-"
+  - delay: 110
+    content: "\r\\"
+  - delay: 95
+    content: "\r|"
+  - delay: 109
+    content: "\r/"
+  - delay: 94
+    content: "\r-"
+  - delay: 47
+    content: "\e[?25l\e[H                                                                                                                        \e[K Result:                                                                                                                \e[K 1. ffmpeg -i dummy.mp4 -vf \"curves=red='0/0 0.5/1 1/1'\" output.mp4                                                     \e[K                                                                                                                        \e[K Tokens used: 947                                                                                                       \e[K                                                                                                                        \e[K This command uses the 'curves' filter to specifically increase the red channel's saturation without                    \e[K affecting the other colors. The points in the curve can be adjusted to achieve the desired effect.                     \e[K                                                                                                                        \e[K What do you want to do?                                                                                                \e[K                                                                                                                        \e[K * Execute                                                                                                              \e[K   Explain                                                                                                              \e[K   Type, but don't execute                                                                                              \e[K   Copy to clipboard                                                                                                    \e[K   Copy to clipboard and execute                                                                                        \e[K   Request a new answer                                                                                                 \e[K   Cancel                                                                                                               \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K                                                                                                                        \e[K\e[30;241H"
+  - delay: 3369
+    content: "\e[H.5% L1:60.4% BI: 1.1%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[m8x8 transform intra:59.8% inter:87.6%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mcoded y,uvDC,uvAC intra: 25.1% 40.7% 15.3% inter: 1.7% 3.9% 0.2%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi16 v,h,dc,p: 74%  7%  6% 13%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 20% 35%  4%  4%  3%  5%  3%  4%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 17% 16%  6% 10%  7%  8%  6%  5%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi8c dc,h,v,p: 73% 14% 10%  3%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mWeighted P-Frames: Y:0.0% UV:0.0%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref P L0: 74.8% 13.1%  9.5%  2.5%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref B L0: 98.0%  1.7%  0.3%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref B L1: 99.2%  0.8%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mkb/s:833.34\e[K\e[38;5;14m\r\n[aac @ 000001f1e593e080] \e[mQavg: 65536.000\e[K\r\n\e[K\r\nD:\\history>dir\e[K\r\n Volume in drive D is M2Working\e[K\r\n Volume Serial Number is 2E94-12B5\e[K\r\n\e[K\r\n Directory of D:\\history\e[K\r\n\e[K\r\n26.06.2025  14:13    <DIR>          .\e[K\r\n26.06.2025  14:09         3.148.783 dummy.mp4\e[K\r\n26.06.2025  14:13         3.172.531 output.mp4\e[K\r\n               2 File(s)      6.321.314 bytes\e[K\r\n               1 Dir(s)  2.233.048.432.640 bytes free\e[K\r\n\e[K\r\nD:\\history>output.mp4\e[K\r\n\e[K\r\nD:\\history>ai only increase the saturation of red\e[K\r\n\e[K\e[?25h\n> ffmpeg -i dummy.mp4 -vf \"curves=red='0/0 0.5/1 1/1'\" output.mp4\r"
+  - delay: 14
+    content: "\e[?25l\n\e[38;5;14m\e[H[libx264 @ 000001f1e5366cc0] \e[mcoded y,uvDC,uvAC intra: 25.1% 40.7% 15.3% inter: 1.7% 3.9% 0.2%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi16 v,h,dc,p: 74%  7%  6% 13%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 20% 35%  4%  4%  3%  5%  3%  4%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 17% 16%  6% 10%  7%  8%  6%  5%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mi8c dc,h,v,p: 73% 14% 10%  3%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mWeighted P-Frames: Y:0.0% UV:0.0%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref P L0: 74.8% 13.1%  9.5%  2.5%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref B L0: 98.0%  1.7%  0.3%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mref B L1: 99.2%  0.8%\e[K\e[38;5;14m\r\n[libx264 @ 000001f1e5366cc0] \e[mkb/s:833.34\e[K\e[38;5;14m\r\n[aac @ 000001f1e593e080] \e[mQavg: 65536.000\e[K\r\n\e[K\r\nD:\\history>dir\e[K\r\n Volume in drive D is M2Working\e[K\r\n Volume Serial Number is 2E94-12B5\e[K\r\n\e[K\r\n Directory of D:\\history\e[K\r\n\e[K\r\n26.06.2025  14:13    <DIR>          .\e[K\r\n26.06.2025  14:09         3.148.783 dummy.mp4\e[K\r\n26.06.2025  14:13         3.172.531 output.mp4\e[K\r\n               2 File(s)      6.321.314 bytes\e[K\r\n               1 Dir(s)  2.233.048.432.640 bytes free\e[K\r\n\e[K\r\nD:\\history>output.mp4\e[K\r\n\e[K\r\nD:\\history>ai only increase the saturation of red\e[K\r\n\e[K\r\n> ffmpeg -i dummy.mp4 -vf \"curves=red='0/0 0.5/1 1/1'\" output.mp4\e[K\r\n\e[K\e[?25h"
+  - delay: 17
+    content: "ffmpeg version 7.1-full_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers\r\n  built with gcc 14.2.0 (Rev1, Built by MSYS2 project)\r\n  configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontc\r\n\e[29;120Hconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-bzlib --enable-lzma --enable-libsnappy --ena\r\n\e[29;120Hable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-\r\n\e[29;120H-libcaca --enable-sdl2 --enable-libaribb24 --enable-libaribcaption --enable-libdav1d --enable-libdavs2 --enable-libopenjp\r\n\e[29;120Hpeg --enable-libquirc --enable-libuavs3d --enable-libxevd --enable-libzvbi --enable-libqrencode --enable-librav1e --enabl\r\n\e[29;120Hle-libsvtav1 --enable-libvvenc --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxeve --en\r\n\e[29;120Hnable-libxvid --enable-libaom --enable-libjxl --enable-libvpx --enable-mediafoundation --enable-libass --enable-frei0r --\r\n\e[29;120H-enable-libfreetype --enable-libfribidi --enable-libharfbuzz --enable-liblensfun --enable-libvidstab --enable-libvmaf --e\r\n\e[29;120Henable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-dxva2 --enable-d3d11va --enable-d3d12va --enable-f\r\n\e[29;120Hffnvcodec --enable-libvpl --enable-nvdec --enable-nvenc --enable-vaapi --enable-libshaderc --enable-vulkan --enable-libpl\r\n\e[29;120Hlacebo --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrw\r\n\e[29;120Hwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame --enable-libvo-amrwbenc --enable-libcodec\r\n\e[29;120Hc2 --enable-libilbc --enable-libgsm --enable-liblc3 --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enabl\r\n\e[29;120Hle-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --enable-librubberband --enable-libsox\r\n\e[29;120Hxr --enable-chromaprint\r\n  libavutil      59. 39.100 / 59. 39.100\r\n  libavcodec     61. 19.100 / 61. 19.100\r\n  libavformat    61.  7.100 / 61.  7.100\r\n  libavdevice    61.  3.100 / 61.  3.100\r\n  libavfilter    10.  4.100 / 10.  4.100\r\n  libswscale      8.  3.100 /  8.  3.100\r\n  libswresample   5.  3.100 /  5.  3.100\r\n  libpostproc    58.  3.100 / 58.  3.100"
+  - delay: 10
+    content: "\r\nInput #0, mov,mp4,m4a,3gp,3g2,mj2, from 'dummy.mp4':\r\n  Metadata:\r\n    major_brand     : isom\r\n    minor_version   : 512\r\n    compatible_brands: isomiso2avc1mp41\r\n    encoder         : Lavf61.7.100\r\n  Duration: 00:00:30.53, start: 0.000000, bitrate: 825 kb/s\r\n  Stream #0:0[0x1](und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR\r\n\e[29;120HR 9:16], 827 kb/s, 30 fps, 30 tbr, 15360 tbn (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Video Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 libx264\r\n  Stream #0:1[0x2](und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 2 kb/s (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Audio Handler\r\n        vendor_id       : [0][0][0][0]\r\n"
+  - delay: 16
+    content: 'File ''output.mp4'' already exists. Overwrite? [y/N] '
+  - delay: 1257
+    content: 'y'
+  - delay: 491
+    content: "\r\nStream mapping:\r\n  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))\r\n  Stream #0:1 -> #0:1 (aac (native) -> aac (native))\r\nPress [q] to stop, [?] for help"
+  - delay: 13
+    content: "\r\n"
+  - delay: 25
+    content: "\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[musing SAR=1/1\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[musing cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mprofile High 4:4:4 Predictive, level 4.0, 4:4:4, 8-bit\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[m264 - core 164 r3192 c24e06c - H.264/MPEG-4 AVC codec - Copyleft 2003-2024 - http://www.vid\r\n\e[29;120Hdeolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed\r\n\e[29;120Hd_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=30 lookah\r\n\e[29;120Hhead_threads=5 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_\r\n\e[29;120H_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahe\r\n\e[29;120Head=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00\r\nOutput #0, mp4, to 'output.mp4':\r\n  Metadata:\r\n    major_brand     : isom\r\n    minor_version   : 512\r\n    compatible_brands: isomiso2avc1mp41\r\n    encoder         : Lavf61.7.100\r\n  Stream #0:0(und): Video: h264 (avc1 / 0x31637661), yuv444p(tv, bt709, progressive), 1080x1920 [SAR 1:1 DAR 9:16], q=2-\r\n\e[29;120H-31, 30 fps, 15360 tbn (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Video Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 libx264\r\n      Side data:\r\n        cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A\r\n  Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 128 kb/s (default)\r\n      Metadata:\r\n        handler_name    : L-SMASH Audio Handler\r\n        vendor_id       : [0][0][0][0]\r\n        encoder         : Lavc61.19.100 aac"
+  - delay: 17
+    content: "\r\n"
+  - delay: 467
+    content: "frame=   30 fps=0.0 q=29.0 size=       0KiB time=00:00:00.93 bitrate=   0.4kbits/s speed=1.81x    \r"
+  - delay: 517
+    content: "frame=  143 fps=139 q=29.0 size=     512KiB time=00:00:04.70 bitrate= 892.5kbits/s speed=4.57x    \r"
+  - delay: 529
+    content: "frame=  264 fps=170 q=29.0 size=    1024KiB time=00:00:08.73 bitrate= 960.6kbits/s speed=5.61x    \r"
+  - delay: 503
+    content: "frame=  380 fps=184 q=29.0 size=    1536KiB time=00:00:12.60 bitrate= 998.7kbits/s speed=6.12x    \r"
+  - delay: 518
+    content: "frame=  498 fps=193 q=29.0 size=    2048KiB time=00:00:16.53 bitrate=1014.8kbits/s speed=6.41x    \r"
+  - delay: 513
+    content: "frame=  616 fps=199 q=29.0 size=    2560KiB time=00:00:20.43 bitrate=1026.4kbits/s speed=6.61x    \r"
+  - delay: 527
+    content: "frame=  731 fps=202 q=29.0 size=    2816KiB time=00:00:24.30 bitrate= 949.3kbits/s speed=6.72x    \r"
+  - delay: 504
+    content: "\e[38;5;13m[out#0/mp4 @ 000002a32a6ac180] \e[mvideo:3664KiB audio:8KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing over\r\n\e[29;120Hrhead: 0.921168%\r\nframe=  901 fps=218 q=-1.0 Lsize=    3706KiB time=00:00:29.96 bitrate=1013.2kbits/s speed=7.24x\e[4C\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mframe I:4     Avg QP:13.30  size: 64448\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mframe P:227   Avg QP:15.81  size: 10448\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mframe B:670   Avg QP:22.65  size:  1674\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mconsecutive B-frames:  0.8%  0.2%  0.0% 99.0%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mmb I  I16..4: 13.9% 78.7%  7.4%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mmb P  I16..4:  0.7%  0.7%  0.0%  P16..4: 14.8%  6.0%  3.1%  0.0%  0.0%    skip:74.7%       \e[30;114H\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mmb B  I16..4:  0.0%  0.0%  0.0%  B16..8: 13.9%  0.2%  0.0%  direct: 0.0%  skip:85.9%  L0:38\r\n\e[29;120H8.7% L1:60.1% BI: 1.2%\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[m8x8 transform intra:66.7% inter:86.2%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mcoded y,u,v intra: 23.6% 11.4% 19.6% inter: 2.1% 0.8% 1.7%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mi16 v,h,dc,p: 71%  8%  7% 13%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mi8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 26% 16% 38%  3%  3%  3%  4%  3%  4%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mi4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 27% 18% 15%  6%  9%  7%  8%  6%  5%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mWeighted P-Frames: Y:0.0% UV:0.0%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mref P L0: 69.3% 14.1% 12.0%  4.6%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mref B L0: 97.6%  2.0%  0.4%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mref B L1: 99.1%  0.9%\e[K\r\n\e[38;5;14m[libx264 @ 000002a32a7100c0] \e[mkb/s:999.26\e[K\r\n"
+  - delay: 93
+    content: "\e[38;5;14m[aac @ 000002a32a70b100] \e[mQavg: 65536.000"
+  - delay: 14
+    content: "\r\n"
+  - delay: 27
+    content: "\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
+  - delay: 20
+    content: |-
+
+      D:\history>
+  - delay: 704
+    content: o
+  - delay: 110
+    content: u
+  - delay: 141
+    content: t
+  - delay: 218
+    content: "\e[?25l\e[30;12Houtput.mp4\e[?25h"
+  - delay: 376
+    content: "\r"
+  - delay: 11
+    content: "\n\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe - output.mp4\a"
+  - delay: 71
+    content: "\e]0;Administrator: C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
+  - delay: 10
+    content: |-
+
+      D:\history>
+  - delay: 5691
+    content: e
+  - delay: 266
+    content: x
+  - delay: 155
+    content: i
+  - delay: 253
+    content: t
+  - delay: 255
+    content: "\r"
+  - delay: 9
+    content: "\n\e]0;C:\\WINDOWS\\SYSTEM32\\cmd.exe\a"
